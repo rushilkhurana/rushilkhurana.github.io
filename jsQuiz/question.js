@@ -34,7 +34,7 @@ class Quiz {
 }
 
 guess(answer) {
-    if(this.getQuestionIndex().isCorrectAnswer(answer)) {
+    if(this.getQuestion().isCorrectAnswer(answer)) {
         this.score++;
             }
         
@@ -56,10 +56,10 @@ function guess(id, guess) {
 function populate() {
 
         var element = document.getElementById("question");
-        element.innerHTML = quiz.getQuestionIndex().text;
+        element.innerHTML = quiz.getQuestion().text;
  
         // show options
-        var choices = quiz.getQuestionIndex().choices;
+        var choices = quiz.getQuestion().choices;
         for(var i = 0; i < choices.length; i++) {
             var element = document.getElementById("choice" + i);
             element.innerHTML = choices[i];
