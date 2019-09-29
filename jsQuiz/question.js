@@ -23,10 +23,10 @@ var questions = [
 
 function populate() {
 
-		var element = document.getElementById("question");
-		element.innerHTML = quiz.getQuestion().text;
+		var ques = document.getElementById("question");
+		ques.innerHTML = quiz.getQuestion().text;
  
-		// show options
+
 		var choices = quiz.getQuestion().choices;
 		for(var i = 0; i < choices.length; i++) {
 			var element = document.getElementById("choice" + i);
